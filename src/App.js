@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Importing only what is necessary
 
 import Menu from './Menu/Menu'; 
