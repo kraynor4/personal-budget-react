@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 import axios from 'axios';
 
 const D3Chart = () => {
-  const chartRef = useRef();  // Always called in every render
+  const chartRef = useRef();
 
   const width = 450;
   const height = 450;
@@ -47,7 +47,7 @@ const D3Chart = () => {
         .value(d => d.value);
 
       const arc = d3.arc()
-        .innerRadius(radius * 0.5)  // Donut hole size
+        .innerRadius(radius * .425)  // Donut hole size
         .outerRadius(radius * 0.8);
 
       const outerArc = d3.arc()

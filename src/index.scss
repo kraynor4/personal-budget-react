@@ -349,11 +349,16 @@ template {
 }
 
 
+/* Normalize and other styles remain unchanged */
+
 html, body {
   font-size: 10px;
   font-family: Tahoma, Arial;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navigation styles remain unchanged */
 nav {
   width: 100%;
   background-color: #3e5397;
@@ -366,13 +371,13 @@ nav ul,
 nav ul li {
   margin: 0;
   padding: 0;
- list-style: none;
- display: inline-block;
+  list-style: none;
+  display: inline-block;
 }
 
 nav ul li a {
   display: block;
-  padding:  0 20px;
+  padding: 0 20px;
   line-height: 44px;
   font-size: 1.4rem;
   text-decoration: none;
@@ -385,6 +390,7 @@ nav ul li a:hover {
   color: #4d5791;
 }
 
+/* Header styles remain unchanged */
 header {
   height: 350px;
   background-color: #b4c6f0;
@@ -395,8 +401,7 @@ header {
   padding-top: 40px;
 }
 
-header h1,
-header h2 {
+header h1, header h2 {
   text-align: center;
   margin: 0;
 }
@@ -411,23 +416,36 @@ header h2 {
   color: #4d5791;
 }
 
+/* Main content */
 main {
   padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: justify;
+  flex-wrap: wrap;  /* Allows wrapping if screen size is small */
+  gap: 20px;  /* Space between charts */
 }
 
-main article {
-  display: inline-block;
+.chart-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 340px;
-  text-align: justify;
-  margin: 0;
-}   
+  max-width: 600px;  /* Control max size of the charts */
+}
 
+.chart {
+  width: 100%;
+  max-width: 450px;  /* Ensures charts don't stretch too much */
+  margin: 0 auto;
+}
+
+/* Footer remains unchanged */
 footer {
   background-color: #b4c6f0;
   padding: 40px;
   height: 200px;
   font-size: 1.4em;
+  text-align: center;
 }
 
 .center {
@@ -438,9 +456,9 @@ footer {
   display: inline-block;
 }
 
+/* Media query for larger screens */
 @media screen and (min-width: 768px) {
   main article {
-      margin: 10px;
+    margin: 10px;
   }
-  
 }
